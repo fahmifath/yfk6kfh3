@@ -1,4 +1,5 @@
 .kiro/
 node_modules
+package-lock.json
 design.md
 requirements.md

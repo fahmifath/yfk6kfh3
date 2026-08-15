@@ -67,21 +67,7 @@ h2 {
   max-width: 400px;
   height: auto;
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
-}
-
-.wheel.spinning {
-  animation: spin 3s cubic-bezier(0.17, 0.67, 0.3, 0.99) forwards;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(1800deg); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .wheel.spinning {
-    animation: spin 0.8s linear forwards;
-  }
+  transform-origin: center;
 }
 
 .pointer {

@@ -3,20 +3,18 @@
 ## Usage
 
 ```bash
-npm test          # 39 tests
-npm run typecheck # tsc --noEmit
+npm test && npm run typecheck
 ```
 
 ## Design Rationale
 
-Game-show prize wheel from "spinning wheel" + "colored segments" in brief. Touchpoints: (1) circular SVG radial segments, (2) cubic-bezier spin animation, (3) "Tonight's chore" copy making the result feel final, not accusatory.
+Game-show prize wheel from "spinning wheel" + "colored segments" in brief. Three touchpoints: (1) SVG radial segments with name labels, (2) spin animation stops exactly on winning segment, (3) "Tonight's chore" copy.
 
 ## Breakpoints
 
-- `640px` — smaller wheel, reduced font sizes
-- `360px` — stacked form layout, compact padding
+- `640px` — smaller wheel, reduced fonts
+- `360px` — stacked form, compact padding
 
 ## Known Limitations
 
-- Max 20 chores; color palette repeats after 8
-- Fixed spin duration; no history log
+- Max 20 chores; colors repeat after 8; names truncated at 9 chars in wheel
