@@ -1,0 +1,13 @@
+{
+  "name": "chore-spin-wheel",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node js/core.test.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^7.0.2"
+  }
+}
