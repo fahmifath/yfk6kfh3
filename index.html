@@ -9,40 +9,47 @@
 </head>
 <body>
   <main class="container">
-    <h1>Chore Spin Wheel</h1>
-    
-    <div class="wheel-container">
-      <svg id="wheel" class="wheel" viewBox="0 0 400 400" aria-label="Chore wheel">
-        <g id="wheel-segments"></g>
-        <circle cx="200" cy="200" r="20" fill="#fff" stroke="#333" stroke-width="2"/>
-        <polygon points="200,10 190,40 210,40" fill="#333" class="pointer"/>
-      </svg>
-    </div>
+    <div class="app-shell">
+      <header class="app-header">
+        <p class="eyebrow">Household fairness</p>
+        <h1>Chore Spin Wheel</h1>
+      </header>
 
-    <div id="result" class="result-display" aria-live="polite" aria-atomic="true">
-      Spin to assign a chore!
-    </div>
-
-    <button id="spin-btn" class="btn btn-spin" type="button">Spin</button>
-
-    <form id="add-form" class="add-form">
-      <label for="chore-input">Add a chore:</label>
-      <div class="form-row">
-        <input 
-          type="text" 
-          id="chore-input" 
-          maxlength="50" 
-          placeholder="e.g., Vacuum, Dishes"
-          aria-describedby="chore-error"
-        >
-        <button type="submit" class="btn btn-add">Add</button>
+      <div class="wheel-stage">
+        <div class="wheel-container">
+          <svg id="wheel" class="wheel" viewBox="0 0 400 400" aria-label="Chore wheel">
+            <g id="wheel-segments"></g>
+            <circle cx="200" cy="200" r="20" fill="#fff" stroke="#1a1a2e" stroke-width="2"/>
+            <polygon points="200,10 190,40 210,40" fill="#f5f7ff" class="pointer"/>
+          </svg>
+        </div>
       </div>
-      <div id="chore-error" class="error" role="alert"></div>
-    </form>
 
-    <div class="chore-section">
-      <h2 id="chore-count">0 chores</h2>
-      <ul id="chore-list" class="chore-list"></ul>
+      <div id="result" class="result-display" aria-live="polite" aria-atomic="true">
+        Spin to assign a chore!
+      </div>
+
+      <button id="spin-btn" class="btn btn-spin" type="button">Spin</button>
+
+      <form id="add-form" class="add-form">
+        <label for="chore-input">Add a chore:</label>
+        <div class="form-row">
+          <input 
+            type="text" 
+            id="chore-input" 
+            maxlength="50" 
+            placeholder="e.g., Vacuum, Dishes"
+            aria-describedby="chore-error"
+          >
+          <button type="submit" class="btn btn-add">Add</button>
+        </div>
+        <div id="chore-error" class="error" role="alert"></div>
+      </form>
+
+      <div class="chore-section">
+        <h2 id="chore-count">0 chores</h2>
+        <ul id="chore-list" class="chore-list"></ul>
+      </div>
     </div>
   </main>
 
