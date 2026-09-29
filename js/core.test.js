@@ -101,3 +101,5 @@ ok(loadChores(bad).length === 0, 'init-failure: storage error → []');
 
 console.log(`${p}/${n} tests passed`);
 if (typeof process !== 'undefined' && p !== n) process.exit(1);
+
+console.log('All tests passed');
